@@ -1,0 +1,15 @@
+<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icon">
+<g clip-path="url(#clip0_3995_6508)">
+<rect width="26" height="26" rx="7.42857" fill="#FFF8F4"/>
+<circle id="Ellipse 2369" opacity="0.6" cx="4.41029" cy="21.5895" r="13.6964" fill="#F36B24"/>
+<circle id="Ellipse 2371" cx="18.5712" cy="6.49993" r="3.71429" fill="#FFEEE7"/>
+<path id="Subtract" opacity="0.3" fill-rule="evenodd" clip-rule="evenodd" d="M16.0994 28.7317C17.3728 26.6521 18.1068 24.2064 18.1068 21.5893C18.1068 20.2428 17.9125 18.9416 17.5504 17.7124C18.8143 16.7926 20.3704 16.25 22.0532 16.25C26.2841 16.25 29.714 19.6798 29.714 23.9107C29.714 28.1416 26.2841 31.5714 22.0532 31.5714C19.6492 31.5714 17.5039 30.4641 16.0994 28.7317Z" fill="#F36B24"/>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_3995_6508">
+<rect width="26" height="26" rx="7.42857" fill="white"/>
+</clipPath>
+</defs>
+</svg>
