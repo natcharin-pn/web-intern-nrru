@@ -31,7 +31,6 @@ const mockChats = [
     notifications: 1,
     avatar: avatarImage,
   },
-  // Additional mock chat entries based on the image
   {
     id: 4,
     name: 'สมชาย ทิมเทือน',

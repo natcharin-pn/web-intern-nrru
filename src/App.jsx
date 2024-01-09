@@ -1,8 +1,10 @@
 import React from 'react';
-import { Layout } from 'antd';
+import { Layout, Upload } from 'antd';
 import styled from 'styled-components';
 import './App.css';
-import Open from './page/open';
+import CustomUpload from './page/upload';
+
+
 
 
 const { Sider, Content } = Layout;
@@ -32,7 +34,7 @@ function App() {
       <StyledSider>Sider</StyledSider>
       <Layout>
         <StyledContent>
-          <Open />
+          <CustomUpload />
         </StyledContent>
       </Layout>
     </StyledLayout>

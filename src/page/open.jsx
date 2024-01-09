@@ -1,4 +1,4 @@
-import { Button, Drawer, Select } from 'antd';
+import { Button, Drawer,Select } from 'antd';
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import 'antd/dist/antd.css';
@@ -140,30 +140,82 @@ const TextIn = styled.div`
 font-size: 12px;
 font-style: normal;
 font-weight: 400;
-line-height: 14.4px;
+
 `;
+
 
 const { Option } = Select;
 
+
 const StyledSelect = styled(Select)`
-    &{position: absolute;
+  && {
+    position: absolute;
     top: 217px;
     left: 40px;
     width: 464px;
-    height:40px;
     padding: 8px;
     border-radius: 8px;
-    border: none;
+    border: 1px solid #F36B24;
     background: #FFF;
     color: #F36B24;
     font-size: 14px;
-    font-family: Prompt;}
-    
+    font-family: Prompt;
+
+    .ant-select-selector {
+      color: #F36B24;
+      display: flex;
+      align-items: center;
+      height: 100%;
+      border: none;
+      box-shadow: none;
+      font-family: Prompt;
+
+      .ant-select-selection-search {
+        .ant-select-selection-search-input {
+          color: #F36B24;
+          font-family: Prompt;
+        }
+      }
+
+      .ant-select-selection-placeholder {
+        color: #F36B24;
+        font-family: Prompt;
+      }
+    }
 
     .ant-select-arrow {
       color: #F36B24;
     }
+
+    &.ant-select-dropdown {
+      width: 46px; /* Adjust as needed */
+      padding: 8px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      .ant-select-item {
+        color: #F36B24;
+        padding: 8px;
+        border: none;
+        font-family: Prompt;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .ant-select-item-option-selected {
+        color: #F36B24;
+        box-shadow: none;
+        border: none;
+        font-family: Prompt;
+        background-color: #FFE4C4;
+      }
+    }
+  }
 `;
+
+
 
 function Open() {
   const [open, setOpen] = useState(false);
@@ -178,7 +230,7 @@ function Open() {
     setOpen(false);
   };
 
-  const [selectedValue, setSelectedValue] = useState('สมศรี สุขมาก');
+  const [selectedValue, setSelectedValue ] = useState('สมศรี สุขมาก');
 
   const handleChange = (value) => {
     console.log(`Selected value: ${value}`);
@@ -211,28 +263,17 @@ function Open() {
           <img src={CompanyIcon} alt="Your Image" />
           <TextIn>สำนักสาธารณสุขและสิ่งแวดล้อม</TextIn>
         </BlockText>
-
-        <StyledSelect
-  defaultValue={selectedValue}
-  onChange={handleChange}
-
-  style={{ width: '464px' }}
-    dropdownStyle={{
-    display: 'flex',
-    width: '464px',
-    padding: '8px',
-    alignItems: 'center',
-    gap: '10px',
-    borderRadius: '8px'
-  }}
-  optionFilterProp="children"
->
-          {mockChats.map((chat) => (
+    <StyledSelect
+      defaultValue={selectedValue} 
+      onChange={handleChange} 
+      bordered={false} 
+    >
+      {mockChats.map((chat) => (
             <Option key={chat.id} value={chat.name}>
               {chat.name}
             </Option>
-          ))}
-        </StyledSelect>
+      ))}
+    </StyledSelect>
       </StyledDrawer>
     </Container>
   );
