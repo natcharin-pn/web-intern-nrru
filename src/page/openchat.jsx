@@ -101,9 +101,8 @@ const MessageContainer = styled.div`
   grid-column: 2;
   background-color: #FFFBF8;
   border-radius: 0px 24px 24px 0px;
-  width: 708px;
-  height: 804px;
-  position: relative;
+  width: 780px;
+  height: 630px;
 `;
 
 const TopHistoryChatStyle = styled.div`
@@ -136,7 +135,7 @@ const HistoryChatName = styled.span`
 `;
 
 const MainHistoryChat = styled.div`
-    height:716px;
+    height:630px;
     padding: 0px 8px 32px 32px; 
 `;
 
@@ -179,7 +178,7 @@ const SuffixIcons = () => (
 );
 
 const MainChat = styled.div`
-  height: 603px;
+  height: 430px;
   margin-top: 30px;
   overflow-y: auto;
   &::-webkit-scrollbar {
@@ -239,7 +238,7 @@ const CardContent = styled.p`
   font-style: normal; 
   font-weight: 400; 
   line-height: 16.8px; 
-  width: 322px; 
+  width: 380px; 
   border-radius: 2px 16px 16px 16px; 
   display: flex; 
   align-items: flex-start; 

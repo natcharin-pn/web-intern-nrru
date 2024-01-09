@@ -27,11 +27,8 @@ const mockChats = [
 ];
 
 const Container = styled.div`
-  position: relative;
-  width: 1440px;
-  height: 1024px;
-  overflow: hidden;
-`;
+  height: 100vh;
+  width: 90%;`;
 
 const StyledButton = styled(Button)`
   background-color: #4CAF50;
@@ -47,11 +44,6 @@ const StyledDrawer = styled(Drawer)`
     background-color: #ffffff;
   }
 
-  &.ant-drawer-right {
-    width: 1440px;
-    height: 1024px;
-
-  }
    .custom-close-icon {
     position: absolute;
     top: 40px;
@@ -62,14 +54,15 @@ const StyledDrawer = styled(Drawer)`
 const BlurOverlay = styled.div`
   backdrop-filter: ${(props) => (props.open ? 'blur(8px)' : 'none')};
   display: ${(props) => (props.open ? 'block' : 'none')};
-  position: fixed;
   background: rgba(21, 15, 11, 0.50);
+  width: 100%;
+  height: 100vh; 
+  position: absolute;
   top: 0;
   left: 0;
-  width: 1440px;
-  height: 1024px;
-  z-index: 1;
+  z-index: 1; 
 `;
+
 
 const Block = styled.div`
   width: auto;
@@ -128,11 +121,7 @@ const BlockText = styled.p`
   align-items: center;
   gap: 8px;
   border-radius: 4px;
-
 box-shadow: 0px 0px 8px 0px rgba(46, 60, 79, 0.06);
-position: absolute;
-top: 185px;
-left: 40px;
 `;
 
 const TextIn = styled.div`
@@ -140,9 +129,7 @@ const TextIn = styled.div`
 font-size: 12px;
 font-style: normal;
 font-weight: 400;
-
 `;
-
 
 const { Option } = Select;
 

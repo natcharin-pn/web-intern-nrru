@@ -2,7 +2,7 @@ import React from 'react';
 import { Layout, Upload } from 'antd';
 import styled from 'styled-components';
 import './App.css';
-import CustomUpload from './page/upload';
+import Openchat from './page/openchat';
 
 
 
@@ -13,19 +13,21 @@ const StyledLayout = styled(Layout)`
   display: grid;
   grid-template-columns: 216px auto;
   background-color: #F7F7F7;
-  width: 1440px;
-  height: 1024px;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+
 `;
 
 const StyledSider = styled(Sider)`
   grid-column: 1;
   background-color: #440000;
-  height: 1024px;
+
 `;
 
 const StyledContent = styled(Content)`
   grid-column: 2;
-  padding: 108px 40px 48px 40px;
+  padding: 20px;
 `;
 
 function App() {
@@ -34,7 +36,7 @@ function App() {
       <StyledSider>Sider</StyledSider>
       <Layout>
         <StyledContent>
-          <CustomUpload />
+          <Openchat />
         </StyledContent>
       </Layout>
     </StyledLayout>

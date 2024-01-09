@@ -94,9 +94,8 @@ const ChatContainer = styled.div`
   border-radius: 24px;
   font-family: Prompt; 
   display: grid;
-  grid-template-columns: 372px 708px;
-  width: 1144px;
-  height: 868px;
+  grid-template-columns: 380px 780px;
+  height: 670px;
   padding: 32px;
   justify-content: center;
   background-color: #fff;
@@ -149,8 +148,7 @@ const MessageContainer = styled.div`
   background-color: #FFFBF8;
   border-radius: 0px 24px 24px 0px;
   display: flex;
-  width: 708px;
-  height: 804px;
+  width: 780px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -159,7 +157,7 @@ const MessageContainer = styled.div`
 const ChatList = styled.div`
   margin-right:8px;
   margin-top: 24px ;
-  max-height: 740px;
+  max-height: 550px;
   overflow-y: auto; 
 
   &::-webkit-scrollbar {
@@ -290,27 +288,27 @@ const ClearIcon = ({ onClick }) => (
 );
 
 function Chat() {
-
   const [inputValue, setInputValue] = useState('');
+
   const handleInputChange = (e) => {
     setInputValue(e.target.value);
   };
+
   const handleClearClick = () => {
     setInputValue('');
   };
   
   return (
-    
     <ChatContainer>
       <SearchContainer>
-          <StyledInput
-            value={inputValue}
-            onSearch={handleInputChange}
-            hasContent={inputValue.length > 0}
-            placeholder="ค้นหาชื่อผู้ใช้ หรือ บทสนทนา"
-            prefix={<img src={SearchIcon} alt="Search" />}
-            suffix={inputValue ? <ClearIcon onClick={handleClearClick} /> : null}
-          />
+        <StyledInput
+          value={inputValue}
+          onChange={handleInputChange} // Changed from onSearch to onChange
+          hasContent={inputValue.length > 0}
+          placeholder="ค้นหาชื่อผู้ใช้ หรือ บทสนทนา"
+          prefix={<img src={SearchIcon} alt="Search" />}
+          suffix={inputValue ? <ClearIcon onClick={handleClearClick} /> : null}
+        />
         <ChatList>
           {mockChats.map(chat => (
             <ChatListItem key={chat.id}>
